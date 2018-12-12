@@ -1,0 +1,33 @@
+#container{
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    width: 90vw;
+}
+
+#texte{
+    border: 1px gray dotted;
+    padding: 2vw;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    font-size: 12px;
+}
+
+#texte_contenu{
+    font-size: 12px;
+}
+#commande{
+    display: flex;
+    flex-direction: row;
+    justify-content : space-around;
+}
+
+.commande_btn{
+    background: white;
+    width: 20vw;
+    margin: 1vw;
+    text-align: center;
+    padding: 1vw;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+
+}
