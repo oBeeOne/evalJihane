@@ -11,7 +11,7 @@ class Db implements Dbquery {
 	// vars
 	protected $db;			// database object
 	protected $conf;
-	protected $sel;
+	protected $sql;
 
     // init
 	public function __construct(){
@@ -31,20 +31,20 @@ class Db implements Dbquery {
 	// methods
 
 	/**
-	 * Query Builder
+	 * Select
 	 */
 
 	public function select(string $select) : Dbquery {
-		$this->sql = "SELECT ".$select;
+		$this->sql = new DbSelect();
 	}
 
     public function from(string $from) : Dbquery {
-		$this->sql .= " FROM ".$from;
+		$this->sql->from($from);
 
 	}
 
     public function where(string $where) : Dbquery {
-		$this->sql .= " WHERE ".$where;
+		$this->sql->where($where);
 
 	}
 
